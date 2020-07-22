@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CardsControllerTest < ActionDispatch::IntegrationTest
+class Api::V1::RelicsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
