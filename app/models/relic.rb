@@ -1,0 +1,2 @@
+class Relic < ApplicationRecord
+end
