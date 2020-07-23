@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_07_22_213514) do
     t.string "name"
     t.string "color"
     t.string "rarity"
-    t.string "type"
+    t.string "card_type"
     t.string "cost"
     t.string "description"
     t.datetime "created_at", precision: 6, null: false

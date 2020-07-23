@@ -13,6 +13,10 @@ gem 'puma', '~> 4.1'
 # serializer
 gem 'fast_jsonapi'
 
+gem 'json'
+
+gem 'pry'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
