@@ -1,24 +1,13 @@
-# README
+# Slay The Spire Rails API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Images and gametext from Slay The Spire
+Scraped using ModTheSpire, BaseMod, and STS Exporter
 
-Things you may want to cover:
+https://github.com/kiooeht/ModTheSpire
+https://github.com/FlipskiZ/BaseMod
+https://github.com/twanvl/sts-exporter
 
-* Ruby version
+# Current API endpoints
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+/api/v1/cards
+/api/v1/relics
