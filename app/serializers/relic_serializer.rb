@@ -1,4 +1,4 @@
 class RelicSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :name, :tier, :pool, :description, :flavor_text
 end
