@@ -2,7 +2,7 @@
 
 Images and gametext from Slay The Spire
 
-Scraped using ModTheSpire, BaseMod, and STS Exporter
+Game data extracted using ModTheSpire, BaseMod, and STS Exporter
 
 https://github.com/kiooeht/ModTheSpire
 
