@@ -1,8 +1,8 @@
 class Api::V1::RelicsController < ApplicationController
 
     def index
-        relic = Relic.all
-        render json: RelicSerializer.new(relic)
+        relics = Relic.all
+        render json: RelicSerializer.new(relics)
     end
 
     def show

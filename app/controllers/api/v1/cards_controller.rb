@@ -1,8 +1,8 @@
 class Api::V1::CardsController < ApplicationController
 
     def index
-        card = Card.all
-        render json: Card.all
+        cards = Card.all
+        render json: CardSerializer.new(cards)
     end
 
 
