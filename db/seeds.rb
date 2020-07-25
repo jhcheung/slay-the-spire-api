@@ -10,7 +10,7 @@ file = File.read('db/items.json')
 data_hash = JSON.parse(file)
 
 data_hash["cards"].each do |card| 
-    Card.create(
+    new_card = Card.create(
         name: card["name"],
         color: card["color"],
         rarity: card["rarity"],
@@ -18,14 +18,29 @@ data_hash["cards"].each do |card|
         cost: card["cost"],
         description: card["description"]
     )
+    image_name = card["name"].gsub(/[[:space:], ']/, '').gsub('+', 'Plus')
+    image_dir = "db/card-images/#{image_name}.png"
+    new_card.main_image.attach(
+        io: File.open(image_dir),
+        filename: "#{image_name}.png",
+        content_type: 'image/png'
+    )
 end
 
 data_hash["relics"].each do |relic| 
-    Relic.create(
+    new_relic = Relic.create(
         name: relic["name"],
         tier: relic["tier"],
         pool: relic["pool"],
         description: relic["description"],
         flavor_text: relic["flavorText"]
     )
+    image_name = relic["name"].gsub(/[[:space:], ']/, '')
+    image_dir = "db/relics/#{image_name}.png"
+    new_relic.main_image.attach(
+        io: File.open(image_dir),
+        filename: "#{image_name}.png",
+        content_type: 'image/png'
+    )
+
 end
