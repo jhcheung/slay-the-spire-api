@@ -15,3 +15,12 @@ https://github.com/twanvl/sts-exporter
 /api/v1/cards
 
 /api/v1/relics
+
+# Using Docker-Compose
+
+```bash
+# see https://docs.docker.com/compose/rails/
+docker-compose build
+docker-compose run web rake db:create db:migrate db:seed
+docker-compose up
+```
