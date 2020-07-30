@@ -1,7 +1,7 @@
 class Api::V1::RelicsController < ApplicationController
 
     def index
-        relics = Relic.all
+        relics = Relic.with_attached_main_image
         render json: RelicSerializer.new(relics)
     end
 
