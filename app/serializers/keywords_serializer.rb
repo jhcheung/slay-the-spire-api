@@ -1,4 +1,7 @@
 class KeywordsSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+
+  attributes :name, :description, :names
+
+
 end
