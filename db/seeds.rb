@@ -42,5 +42,12 @@ data_hash["relics"].each do |relic|
         filename: "#{image_name}.png",
         content_type: 'image/png'
     )
+end
 
+data_hash["keywords"].each do |keyword|
+    new_keyword = Keyword.create(
+        name: keyword["name"],
+        description: keyword["description"],
+        names: keyword["names"]
+    )
 end
