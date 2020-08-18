@@ -9,6 +9,10 @@ terms = [
     "Whenever a card is Exhausted,\ngain 3 Block." # cards/71
 ]
 
+keywords = [
+    "Block", "Exhaust", "Upgrade"
+]
+
 terms.each do |term|
     term = term.gsub(/Block/, '<Block/>')
     term = term.gsub(/\bExhaust\b/, '<Exhaust/>')
