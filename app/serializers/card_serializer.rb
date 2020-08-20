@@ -1,7 +1,7 @@
 class CardSerializer
   include FastJsonapi::ObjectSerializer
 
-  attributes :name, :color, :rarity, :card_type, :cost, :description
+  attributes :name, :color, :rarity, :card_type, :cost, :description, :keyword_description
 
   attribute :image do |object|
     if object.main_image.attached?

@@ -9,16 +9,18 @@
 file = File.read('db/items.json')
 data_hash = JSON.parse(file)
 
-data_hash["cards"].each do |card| 
+# see test_combat_generated_and_keywords.rb for how this was generated
+keyword_regex = /(lightning\+|intangible|unplayable|vulnerable|dexterity|lightning|transform|channeled|exhausted|retained|weakened|strength|upgraded|divinity|ethereal|artifact|exhausts|confused|lock\-on|plasma\+|poisoned|unknown|upgrade|weakens|channel|stances|retains|frost\+|exhaust|blocks|locked|thorns|mantra|dark\+|wounds|strike|opener|retain|plasma|evoked|status|poison|innate|stance|weaken|ritual|wrath|\[E\]|\[G\]|\[R\]|\[W\]|block|burns|curse|dazed|evoke|fatal|focus|frail|frost|regen|shivs|vigor|voids|wound|\[B\]|weak|scry|dark|calm|void|burn|shiv)/i
 
-    # TODO decorated description, i.e. gain 3 <Keyword name="Block"/>
+data_hash["cards"].each do |card| 
     new_card = Card.create(
         name: card["name"],
         color: card["color"],
         rarity: card["rarity"],
         card_type: card["type"],
         cost: card["cost"],
-        description: card["description"]
+        description: card["description"],
+        keyword_description: card["description"].gsub(keyword_regex, '<Keyword name="\1"/>')
     )
     image_name = card["name"].gsub(/[[:space:], ']/, '').gsub('+', 'Plus')
     image_dir = "db/card-images/#{image_name}.png"
