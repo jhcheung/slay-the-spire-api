@@ -1,5 +1,4 @@
 require 'JSON'
-# require 'pastel'
 
 file = File.read('db/items.json')
 data_hash = JSON.parse(file)
@@ -31,14 +30,6 @@ terms = [
 ]
 
 terms.each do |term|
-    # term = term.gsub(/Block/, '<Block/>')
-    # term = term.gsub(/\bExhaust\b/, '<Exhaust/>')
-    # term = term.gsub(/\bExhausted\b/, '<Exhausted/>')
-    # term = term.gsub(/\[B\]/, '<B/>')
-    # term = term.gsub(/\*Through \*Violence/, '<card>Through Violence</card>')
-    # term = term.gsub(/\*Void/, '<card>Void</card>')
-
-    # term = term.gsub(/(exhausted|exhaust|block)/i, '<Keyword name="\1"/>')
     term = term.gsub(keyword_regex, '<Keyword name="\1"/>')
     puts term
 end
