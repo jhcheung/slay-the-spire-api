@@ -10,6 +10,8 @@ file = File.read('db/items.json')
 data_hash = JSON.parse(file)
 
 data_hash["cards"].each do |card| 
+
+    # TODO decorated description, i.e. gain 3 <Keyword name="Block"/>
     new_card = Card.create(
         name: card["name"],
         color: card["color"],

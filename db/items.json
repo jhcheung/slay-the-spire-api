@@ -8820,7 +8820,7 @@
     {
       "name": "Mantra",
       "description": "When you obtain 10 Mantra, enter Divinity.",
-      "names": ["mantra","through violence"],
+      "names": ["mantra"],
       "mod": ""
     },
     {

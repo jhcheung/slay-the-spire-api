@@ -10,12 +10,11 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 
-# serializer
+# added extra libraries for serialization, etc
 gem 'fast_jsonapi'
-
 gem 'json'
-
 gem 'pry'
+# gem 'pastel'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
