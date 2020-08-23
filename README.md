@@ -16,6 +16,8 @@ https://github.com/twanvl/sts-exporter
 
 /api/v1/relics
 
+/api/v1/keywords
+
 # Using Docker-Compose
 
 ```bash
