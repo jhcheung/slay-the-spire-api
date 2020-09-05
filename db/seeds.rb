@@ -20,7 +20,7 @@ data_hash["cards"].each do |card|
         card_type: card["type"],
         cost: card["cost"],
         description: card["description"],
-        keyword_description: card["description"].gsub(keyword_regex, '<Keyword name="\1"/>')
+        keyword_description: card["description"].gsub(keyword_regex, '<Keyword name="\1"></Keyword>')
     )
     image_name = card["name"].gsub(/[[:space:], ']/, '').gsub('+', 'Plus')
     image_dir = "db/card-images/#{image_name}.png"
