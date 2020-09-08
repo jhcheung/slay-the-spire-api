@@ -23,6 +23,10 @@ https://github.com/twanvl/sts-exporter
 ```bash
 # see https://docs.docker.com/compose/rails/
 docker-compose build
-docker-compose run web rake db:reset db:create db:migrate db:seed
+docker-compose run web rake db:create db:migrate db:seed
 docker-compose up
+```
+
+```to reset the database
+docker-compose run web rake db:reset
 ```
