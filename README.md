@@ -24,7 +24,8 @@ https://github.com/twanvl/sts-exporter
 # see https://docs.docker.com/compose/rails/
 docker-compose build
 docker-compose run web rake db:create db:migrate db:seed
-docker-compose up
+docker-compose up --d (to run detached)
+docker-compose down (to pull down a detached container)
 ```
 
 ```to reset the database
